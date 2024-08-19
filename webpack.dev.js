@@ -13,11 +13,11 @@ export default {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/', // Ensure publicPath is set for correct asset loading
+        publicPath: '/',
         libraryTarget: 'var',
         library: 'Client'
     },
-    devtool: 'inline-source-map', // Source maps for easier debugging
+    devtool: 'inline-source-map', 
     module: {
         rules: [
             {
@@ -33,14 +33,14 @@ export default {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader', // Injects styles into the DOM
-                    'css-loader',   // Resolves CSS imports
-                    'sass-loader'   // Compiles Sass to CSS
+                    'style-loader', 
+                    'css-loader',   
+                    'sass-loader'   
                 ]
             },
             {
                 test: /\.(jpg|jpeg|png|gif|svg)$/,
-                type: 'asset/resource' // Handles image files
+                type: 'asset/resource'
             }
         ]
     },
@@ -50,9 +50,9 @@ export default {
             filename: 'index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css' // Extracts CSS into separate files
+            filename: '[name].css' 
         }),
-        new webpack.HotModuleReplacementPlugin() // Enables HMR
+        new webpack.HotModuleReplacementPlugin() 
     ],
     devServer: {
         port: 8001,
