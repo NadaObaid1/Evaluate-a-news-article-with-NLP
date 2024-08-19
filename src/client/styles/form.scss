@@ -1,0 +1,36 @@
+form {
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 40px;
+}
+
+input {
+    padding: 10px 25px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}
+.evaluation-container {
+    p {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 20px; 
+        text-align: center; 
+        line-height: 1.5;
+    }
+
+    .evaluate-button {
+        background-color: #166678;
+        color: white;
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+        
+        &:hover {
+            background-color: #145a6d; 
+        }
+    }
+}
+
